@@ -1,4 +1,4 @@
-# Connecting ChatGPT to a Facebook Messenger Account
+# ChatGPT-Powered Messenger Bot
 
 This is an old project I worked on back in 2024 during my exploration of AI-powered solutions. I decided to share it here on GitHub to benefit others who might find it useful as a starting point for building their own chatbots or learning about integrating AI with messaging platforms. It’s a simple yet functional chatbot built with Flask, integrated with Facebook Messenger, and powered by OpenAI’s GPT-3.5-turbo model. I hope you find it helpful—feel free to use it, improve it, or adapt it for your own needs!
 
@@ -48,75 +48,12 @@ Follow these steps to set up and run the chatbot on your own machine:
 
 #### Prerequisites
 - Python 3.x installed.
-- A Facebook Developer account and a Facebook app with Messenger enabled.
+- A Facebook Developer account and a Facebook Page with Messenger enabled (note: this works with Pages, not personal accounts).
 - An OpenAI API key.
 
 #### Setup Instructions
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/eshraq-ai-chatbot.git
-   cd eshraq-ai-chatbot
-   ```
-
-2. **Install Dependencies**
-   Install the required Python libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   The `requirements.txt` includes:
-   ```
-   flask
-   openai
-   requests
-   sqlite3
-   ```
-
-3. **Set Up Environment Variables**
-   - Create a file named `env.py` in the project root.
-   - Add the following variables (replace with your own keys):
-     ```python
-     import os
-     os.environ['OPENAI_API_KEY'] = 'your-openai-api-key'
-     os.environ['FB_ACCESS_TOKEN'] = 'your-facebook-access-token'
-     os.environ['VERIFY_TOKEN'] = 'your-custom-verify-token'
-     ```
-
-4. **Run the Application**
-   Start the Flask server:
-   ```bash
-   python app.py
-   ```
-   The app will run on `http://localhost:5001`.
-
-5. **Expose Your Local Server**
-   - Use a tool like [ngrok](https://ngrok.com/) to make your local server accessible online:
-     ```bash
-     ngrok http 5001
-     ```
-   - Copy the public URL (e.g., `https://your-ngrok-url.ngrok.io`).
-
-6. **Configure Facebook Webhook**
-   - Go to your Facebook Developer account.
-   - In your app’s Messenger settings, set the webhook URL to `https://your-ngrok-url.ngrok.io/webhook`.
-   - Use the `VERIFY_TOKEN` you defined in `env.py` for verification.
-   - Subscribe to the "messages" event.
-
-7. **Test the Chatbot**
-   - Send a message to your Facebook page via Messenger, and the bot should respond!
-
----
-
-### Tips for Users
-- **Test Locally First**: Use the `/test` endpoint (`http://localhost:5001/test`) to ensure the app runs correctly.
-- **Secure Your Keys**: Never commit `env.py` to GitHub—keep it in `.gitignore`.
-- **Customize the Bot**: Edit the system prompt in `generate_openai_response` to change the bot’s personality or purpose.
-- **Scale It**: Add more features like message classification or support for other platforms (e.g., WhatsApp).
-- **Debugging**: Check the console logs (thanks to `logging`) if something goes wrong.
-
----
-
-### Notes
-- This was a proof-of-concept project from 2024, so it’s not production-ready but works well as a foundation.
-- Contributions are welcome—feel free to submit pull requests or suggestions!
-
+   git clone https://github.com/your-username/chatgpt-messenger-bot.git
+   cd chatgpt-messenger-bot
 

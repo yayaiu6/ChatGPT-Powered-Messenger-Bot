@@ -1,7 +1,7 @@
 
 # ChatGPT-Powered Messenger Bot
 
-This project creates a chatbot that talks to users on Facebook Messenger. It uses OpenAI’s GPT-3.5-turbo to generate clever, context-aware responses and saves chat history in a SQLite database so it can “remember” conversations. The bot is designed to promote AI solutions to businesses, but you can tweak it for any purpose you like!
+This project creates a chatbot that talks to users on Facebook Messenger. It uses OpenAI’s GPT-4o to generate clever, context-aware responses and saves chat history in a SQLite database so it can “remember” conversations. The bot is designed to promote AI solutions to businesses, but you can tweak it for any purpose you like!
 
 ### Why Use This Bot?
 - **Smarter Conversations**: It keeps track of the last 5 messages to give better replies.
@@ -86,16 +86,14 @@ This bot connects three big tools: ngrok, Facebook Messenger, and OpenAI. Let’
 
 ### OpenAI: Powering the Brain
 - **What is it?**  
-  OpenAI is the company behind ChatGPT. We’re using their GPT-3.5-turbo model, which is fast, smart, and great for conversations.
+  OpenAI is the company behind ChatGPT. We’re using their GPT-4o model, which is fast, smart, and great for conversations.
 
 - **How does it work here?**  
   - You get an API key from OpenAI (like a password to use their service).  
   - The bot sends the user’s message and chat history to OpenAI via their API.  
   - OpenAI sends back a response, which the bot passes to the user.
 
-- **Why GPT-3.5-turbo?**  
-  - It’s powerful but cheaper and faster than newer models like GPT-4.  
-  - Perfect for a demo like this—smart enough to impress without breaking the bank.
+
 
 - **Cool Detail**:  
   You can tweak how the bot talks by changing the “system prompt” (e.g., “Act like a friendly teacher” or “Be a sassy robot”). It’s all in the `generate_openai_response` function.

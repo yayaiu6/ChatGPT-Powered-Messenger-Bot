@@ -195,3 +195,8 @@ Ready to get this bot running? Follow these steps carefully—I’ve made them s
 - **Add Cool Stuff**: Try classifying messages (happy/sad) or connecting to WhatsApp.  
 - **Fix Problems**: Watch the terminal for error messages if something goes wrong.
 
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+

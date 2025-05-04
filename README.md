@@ -21,7 +21,7 @@ Here’s a closer look at what’s inside the code:
 
 2. **`generate_openai_response(user_message, chat_history)`**  
    - Takes the user’s message and their recent chat history.  
-   - Sends them to OpenAI’s GPT-3.5-turbo to get a smart response.  
+   - Sends them to OpenAI’s GPT-4o to get a smart response.  
    - You can tweak the “system prompt” here to make the bot funny, formal, or whatever vibe you want!
 
 3. **`save_message_to_db(user_id, message, response)`**  
